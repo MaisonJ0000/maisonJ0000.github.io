@@ -6,8 +6,8 @@ import {
 } from '../styles/globalStyle';
 
 const Home = ({ userData }) => {
-  const renderUserList = (users) => users.map((user, i) => (
-    <li className="list-group-item" key={i}>
+  const renderUserList = (users) => users.map((user) => (
+    <li className="list-group-item" key={user.id}>
       <Link href={{
         pathname: '/users/profile',
         query: {
@@ -15,14 +15,14 @@ const Home = ({ userData }) => {
         },
       }}
       >
-        <a>{user.name}</a>
+        <div>{user.name}</div>
       </Link>
     </li>
   ));
 
   return (
     <MainLayout>
-      <h1>welcome</h1>
+      <h1>welcome updated!@</h1>
       <h1>Pick a user</h1>
       <ul className="list-group">
         {renderUserList(userData)}
@@ -35,15 +35,12 @@ const Home = ({ userData }) => {
         <code>:hover</code>
         .
       </Combined>
-      <Animated animation={bounce}>Let's bounce.</Animated>
+      <Animated animation={bounce}>{'Let\'s bounce.'}</Animated>
     </MainLayout>
   );
 };
 
-Home.getInitialProps = async ({
-  // eslint-disable-next-line no-unused-vars
-  req, res, match, history, location, ...ctx
-}) => {
+Home.getInitialProps = async () => {
   let userData;
 
   try {

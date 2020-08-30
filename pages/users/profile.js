@@ -20,11 +20,13 @@ const Profile = ({ user }) => {
 };
 
 Profile.getInitialProps = async ({ query }) => {
-  let user;
+  let user = {};
 
   try {
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${query.userId}`);
-    user = response.data;
+    if (query.userId) {
+      const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${query.userId}`);
+      user = response.data;
+    }
   } catch (e) {
     console.error(e);
   }
