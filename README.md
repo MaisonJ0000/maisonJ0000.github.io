@@ -1,6 +1,6 @@
 # MaisonJ's Blog
 
-## libraries
+## Libraries
 - Next.js
 - Emotion
 - ESLint
