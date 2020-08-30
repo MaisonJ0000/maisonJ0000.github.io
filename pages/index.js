@@ -15,7 +15,7 @@ const Home = ({ userData }) => {
         },
       }}
       >
-        <div>{user.name}</div>
+        <button type="button">{user.name}</button>
       </Link>
     </li>
   ));
