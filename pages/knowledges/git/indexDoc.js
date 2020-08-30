@@ -25,7 +25,7 @@ const indexDoc = () => (
 
     <p>아래처럼 remote-origin을 설정한다.</p>
     <SyntaxHighlighter language="jsx" style={prism}>
-      github-j10kSeo:j10kSeo/Study.git
+      github-MaisonJ0000:MaisonJ0000/Blog.git
     </SyntaxHighlighter>
   </>
 );
