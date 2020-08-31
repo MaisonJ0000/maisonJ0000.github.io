@@ -13,10 +13,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: |
-          git config --local user.name MaisonJ0000
-          git config --local user.email maison.J0000@gmail.com
       - run: npm ci
       - run: npm run deploy
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          deploy_key: ${{secrets.ACTIONS_DEPLOY_KEY}}
