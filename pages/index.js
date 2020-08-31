@@ -22,7 +22,7 @@ const Home = ({ userData }) => {
 
   return (
     <MainLayout>
-      <h1>welcome updated!@!!!</h1>
+      <h1>welcome! updated again</h1>
       <h1>Pick a user</h1>
       <ul className="list-group">
         {renderUserList(userData)}

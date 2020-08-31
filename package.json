@@ -8,7 +8,7 @@
     "dev": "next",
     "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
-    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out"
+    "deploy": "rm -rf node_modules/.cache && rimraf out && npm run build && gh-pages -d out"
   },
   "author": "",
   "license": "ISC",
