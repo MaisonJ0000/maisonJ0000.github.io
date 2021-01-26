@@ -2,6 +2,12 @@
 https://maisonj0000.github.io/
 
 ## Libraries
-- Next.js
-- Emotion
-- ESLint
+- Framework
+  - Next.js
+- Type
+  - TypeScript
+- Formatter
+  - ESLint
+  - Prettier
+- CSS-in-JS
+  - Emotion
