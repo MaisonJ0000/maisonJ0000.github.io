@@ -7,7 +7,7 @@ const Header = () => (
         <nav className="navbar">
           <Link href="/">
             <a className="navbar__brand">
-              Maison's playground
+              Maison&apos;s playground
             </a>
           </Link>
         </nav>

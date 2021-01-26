@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { encodePathIdFromPath } from '../../lib/post';
 
 type Props = {
   content: string
@@ -13,7 +12,7 @@ const PostPreview = ({ content, path, slug }: Props) => (
       <Link href={path}>
         <p>{slug}</p>
       </Link>
-      <Link as={`/posts/${encodePathIdFromPath(path)}`} href="/posts/[pathId]">
+      <Link as={`/posts/${path}`} href="/posts/[...path]">
         <a className="hover:underline">{content.slice(0, 20)}</a>
       </Link>
     </h3>

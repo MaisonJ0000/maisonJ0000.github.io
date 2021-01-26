@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import _ from 'lodash';
 import MainLayout from '../../components/layouts/mainLayout';
-import { encodePathIdFromPath, decodePathFromPathId } from '../../lib/post';
 import { fetchPostPaths, fetchPostByPath } from '../../lib/api/post';
 import markdownToHtml from '../../lib/markdownToHtml';
 
@@ -27,13 +26,13 @@ export default Post;
 
 type Params = {
   params: {
-    pathId: string
+    path: string[]
   }
 }
 
 export const getStaticProps = async ({ params }: Params) => {
-  const { pathId } = params;
-  const post = fetchPostByPath(decodePathFromPathId(pathId));
+  const { path } = params;
+  const post = fetchPostByPath((path.join('/')));
   const content = await markdownToHtml(post.content || '');
 
   return {
@@ -52,7 +51,7 @@ export const getStaticPaths = async () => {
     paths: _.map(allPaths, (path) => (
       {
         params: {
-          pathId: encodePathIdFromPath(path),
+          path: path.split('/'),
         },
       }
     )),

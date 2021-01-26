@@ -11,10 +11,12 @@ const Knowledges = ({ allPosts }: Props) => (
   <div>
     <nav>
       <Link href="/knowledges/html">
-        <a>html</a>
         {/* TODO: a 대신에 버튼으로 만들고 스타일링 */}
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a>html</a>
       </Link>
       <Link href="/knowledges/nextjs">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a>nextJs</a>
       </Link>
     </nav>
