@@ -4,13 +4,15 @@ https://maisonj0000.github.io/
 ## Libraries
 - Framework
   - Next.js
-- Type
+- Transpiler
   - TypeScript
 - Formatter
   - ESLint
   - Prettier
 - CSS-in-JS
   - Emotion
+- Util
+  - lodash
 
 ## Deploy
 github-pages + github-actions

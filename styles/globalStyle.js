@@ -13,6 +13,9 @@ export const globalStyles = (
         font-family: Helvetica, Arial, sans-serif;
         font-size: 24px;
       }
+      header {
+        color: red;
+      }
     `}
   />
 );
