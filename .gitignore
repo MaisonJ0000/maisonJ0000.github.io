@@ -5,3 +5,4 @@ out/
 package-lock.json
 pages/Drips/
 pages/Projects/
+.envrc

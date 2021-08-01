@@ -1,9 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
 import MainLayout from '../components/layouts/mainLayout';
-import {
-  Basic, Combined, Animated, bounce,
-} from '../styles/globalStyle';
 
 const Home = ({ userData }) => {
   const renderUserList = (users) => users.map((user) => (
@@ -22,20 +19,20 @@ const Home = ({ userData }) => {
 
   return (
     <MainLayout>
-      <h1>welcome! updated again</h1>
-      <h1>Pick a user</h1>
-      <ul className="list-group">
-        {renderUserList(userData)}
-      </ul>
+      {/* <h1>welcome! updated again</h1> */}
+      {/* <h1>Pick a user</h1> */}
+      {/* <ul className="list-group"> */}
+      {/*  {renderUserList(userData)} */}
+      {/* </ul> */}
 
-      <Basic>Cool Styles</Basic>
-      <Combined>
-        With
-        {' '}
-        <code>:hover</code>
-        .
-      </Combined>
-      <Animated animation={bounce}>{'Let\'s bounce.'}</Animated>
+      {/* <Basic>Cool Styles</Basic> */}
+      {/* <Combined> */}
+      {/*  With */}
+      {/*  {' '} */}
+      {/*  <code>:hover</code> */}
+      {/*  . */}
+      {/* </Combined> */}
+      {/* <Animated animation={bounce}>{'Let\'s bounce.'}</Animated> */}
     </MainLayout>
   );
 };
