@@ -4,6 +4,13 @@ const MainLayoutStyle = {
   header: {
     color: 'red',
   },
+  '.main-layout__container': {
+    display: 'flex',
+    justifyItems: 'start',
+    alignItems: 'center',
+    minHeight: '100vh',
+    color: '#fff',
+  },
 };
 
 export default MainLayoutStyle;

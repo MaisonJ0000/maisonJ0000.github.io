@@ -19,11 +19,14 @@ const MainLayout = ({ children }) => (
     </div>
     <Head>
       <title>{'MaisonJ\'s Playground'}</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Wire+One&display=swap" rel="stylesheet" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Wire+One&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto+Condensed&display=swap"
+        rel="stylesheet"
+      />
       <link href="/static/css/styles.css" rel="stylesheet" />
     </Head>
     <div className="main-layout" css={MainLayoutStyle}>

@@ -35,12 +35,13 @@ const fetchPostByPath = (_path: string) => {
   const fullPath = path.join(process.cwd(), `pages/${_path}.md`);
   const slug = _(_path).split('/').last();
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { content } = matter(fileContents);
+  const { content, data } = matter(fileContents);
 
   return {
     path: _path,
-    content,
     slug,
+    content,
+    ...data,
   };
 };
 
@@ -50,8 +51,16 @@ const fetchPosts = (opts: { rootPagePath: string }) => {
   return posts;
 };
 
+const fetchLastPost = (opts: { rootPagePath: string }) => {
+  const posts = fetchPosts(opts);
+  const sortedPosts = _.orderBy(posts, 'date', 'desc');
+
+  return _.head(sortedPosts);
+};
+
 export {
   fetchPostPaths,
   fetchPosts,
   fetchPostByPath,
+  fetchLastPost,
 };

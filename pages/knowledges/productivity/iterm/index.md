@@ -40,3 +40,9 @@ windows:
 요렇게 시작해봄.
 
 
+그리고 mouse on
+
+iterm2
+preference- general- Applications in terminal may access clipboard: 
+
+opt누르고 드래그

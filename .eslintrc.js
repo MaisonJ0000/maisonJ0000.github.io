@@ -12,6 +12,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
   ],
   rules: {
+    'arrow-body-style': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 'off',

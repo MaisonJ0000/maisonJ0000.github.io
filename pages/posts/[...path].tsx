@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import _ from 'lodash';
+
 import MainLayout from '../../components/layouts/mainLayout';
 import { fetchPostPaths, fetchPostByPath } from '../../lib/api/post';
 import markdownToHtml from '../../lib/markdownToHtml';
