@@ -5,7 +5,7 @@ const headerStyle = {
     '.navbar__brand': {
       color: '#fff',
       fontFamily: 'Zen Tokyo Zoo',
-      fontSize: '40px',
+      fontSize: '30px',
       fontWeight: '900',
       textDecoration: 'none',
     },

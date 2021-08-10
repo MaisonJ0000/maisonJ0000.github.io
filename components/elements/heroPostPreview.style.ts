@@ -1,12 +1,10 @@
 const heroPostStyle = {
-  width: '30%',
   marginLeft: '10%',
-  '.hover-underline': {
-
-  },
-  '.type': {
-    fontStyle: 'italic',
-    letterSpacing: '3px',
+  '.new-badge': {
+    fontSize: '15px',
+    background: 'linear-gradient(90deg,#ed6292 25%,#ed5760 87.5%)',
+    padding: '0px 5px',
+    borderRadius: '3px',
   },
   '.link__container': {
     textDecoration: 'none',
@@ -14,6 +12,8 @@ const heroPostStyle = {
     color: '#fff',
     h1: {
       fontSize: '50px',
+      lineHeight: '55px',
+      marginTop: '0',
     },
     p: {
       textDecoration: 'none',

@@ -31,7 +31,7 @@ const MainLayout = ({ children }) => (
     </Head>
     <div className="main-layout" css={MainLayoutStyle}>
       <Header />
-      <div className="main-layout__container">
+      <div className="main-layout__content">
         {children}
       </div>
     </div>

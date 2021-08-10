@@ -9,20 +9,16 @@ type Props = {
 }
 
 const HeroPostPreview = ({ post }: Props) => {
-  console.log('[JONGMAN_LOG] post', post, new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[1].slice(0, -1));
   const {
     path,
-    slug,
-    content,
     title,
     description,
-    date,
   } = post;
 
   return (
     <div css={heroPostStyle}>
-      <p className="type">the most recent article</p>
-      <Link href={path}>
+      <span className="new-badge">NEW</span>
+      <Link as={`/posts/${path}`} href="/posts/[...path]">
         <a className="link__container hover-underline">
           <h1>{title}</h1>
           <p>{description}</p>
