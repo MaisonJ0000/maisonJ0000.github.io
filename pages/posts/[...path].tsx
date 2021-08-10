@@ -6,16 +6,17 @@ import { fetchPostPaths, fetchPostByPath } from '../../lib/api/post';
 import markdownToHtml from '../../lib/markdownToHtml';
 
 type Props = {
+  title: string,
   content: string
 }
 
-const Post = ({ content }: Props) => (
+const Post = ({ title, content }: Props) => (
   <MainLayout>
     <Head>
-      <title>hehe</title>
+      <title>{title}</title>
     </Head>
     <article>
-      <h1>ttle</h1>
+      <h1>{title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: content }}
       />
@@ -38,6 +39,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
   return {
     props: {
+      ...post,
       content,
     },
   };

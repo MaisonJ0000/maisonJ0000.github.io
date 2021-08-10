@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { globalStyles } from '../components/global.style';
+import globalStyles from '../components/global.style';
 
 const App = ({ Component, pageProps }) => (
   <>

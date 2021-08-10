@@ -33,6 +33,4 @@ const globalStyles = (
   />
 );
 
-export {
-  globalStyles,
-};
+export default globalStyles;
