@@ -27,7 +27,11 @@ const globalStyles = (
       }
       
       .hover-underline {
-        
+        text-decoration: none;
+      }
+      
+      .hover-underline:hover {
+        text-decoration: underline;
       }
     `}
   />

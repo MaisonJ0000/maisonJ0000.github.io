@@ -19,7 +19,7 @@ const HeroPostPreview = ({ post }: Props) => {
     <div css={heroPostStyle}>
       <span className="new-badge">NEW</span>
       <Link as={`/posts/${path}`} href="/posts/[...path]">
-        <a className="link__container hover-underline">
+        <a className="link__container ">
           <h1>{title}</h1>
           <p>{description}</p>
         </a>

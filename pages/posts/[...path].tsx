@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Post = ({ title, content }: Props) => (
-  <MainLayout>
+  <MainLayout type="post">
     <Head>
       <title>{title}</title>
     </Head>

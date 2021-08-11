@@ -23,6 +23,12 @@ transform: translate(-50%, -50%);
 보통 모달 등을 중앙 정렬할 때 absolute와 조합하기 편하다.
 
 
+## 여백주기
+wrapper에 width, margin auto를 주고 
+content는 내용에 맞추는 방법
+
+grid가 심플하지 않나
+
 
 ## position
 ### absolute

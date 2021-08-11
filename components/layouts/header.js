@@ -2,12 +2,10 @@ import Link from 'next/link';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import headerStyle from './header.style';
-import PostPreviews from '../compositions/postPreviews';
 
 const Header = () => (
   <div css={headerStyle}>
     <header>
-      {/* <PostPreviews /> */}
       <div className="container">
         <nav className="navbar">
           <Link href="/">

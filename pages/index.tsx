@@ -11,7 +11,6 @@ type Props = {
 }
 
 const Home = ({ lastPost }: Props) => {
-  console.log('[JONGMAN_LOG] lastPost', lastPost, new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[1].slice(0, -1));
   return (
     <MainLayout>
       <HeroPostPreview

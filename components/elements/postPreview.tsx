@@ -13,7 +13,7 @@ const PostPreview = ({ content, path, slug }: Props) => (
         <p>{slug}</p>
       </Link>
       <Link as={`/posts/${path}`} href="/posts/[...path]">
-        <a className="hover:underline">{content.slice(0, 20)}</a>
+        <a>{content.slice(0, 20)}</a>
       </Link>
     </h3>
   </div>
