@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Header from './header';
 import MainLayoutStyle from './mainLayout.style';
 
-const MainLayout = ({ children, type }: { children: any, type: string }) => {
+const MainLayout = ({ children, type }: { children: any, type?: string }) => {
   return (
     <>
       <div className="bgWrap">
@@ -42,6 +42,10 @@ const MainLayout = ({ children, type }: { children: any, type: string }) => {
       </div>
     </>
   );
+};
+
+MainLayout.defaultProps = {
+  type: '',
 };
 
 export default MainLayout;

@@ -1,9 +1,6 @@
-import axios from 'axios';
-import Link from 'next/link';
 import MainLayout from '../components/layouts/mainLayout';
 import { fetchLastPost } from '../lib/api/post';
 import Post from '../types/post';
-import PostPreviews from '../components/compositions/postPreviews';
 import HeroPostPreview from '../components/elements/heroPostPreview';
 
 type Props = {
