@@ -1,0 +1,1 @@
+{"pageProps":{"path":"knowledges/vanillajs/index","slug":"index","content":"<h1>Vanilla JS</h1>\n<h2>Element.classList</h2>\n<h3>toggle</h3>\n<p><code>div.classList.toggle(\"visible\");</code>\n지원함</p>\n<h2>Location</h2>\n<h3>Location.reload()</h3>\n<p>새로고침 버튼처럼 현재 리소스를 다시 불러온다.</p>\n"},"__N_SSG":true}
