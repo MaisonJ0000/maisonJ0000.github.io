@@ -5,9 +5,14 @@ import classNames from 'classnames';
 
 import Image from 'next/image';
 import Header from './header';
-import MainLayoutStyle from './mainLayout.style';
+import MainLayoutStyle, { DarkMainLayoutTheme, LightMainLayoutTheme } from './mainLayout.style';
 
 const MainLayout = ({ children, type }: { children: any, type?: string }) => {
+  let theme = DarkMainLayoutTheme;
+  if (type === 'post') {
+    theme = LightMainLayoutTheme;
+  }
+
   return (
     <>
       <div className="bgWrap">
@@ -32,7 +37,7 @@ const MainLayout = ({ children, type }: { children: any, type?: string }) => {
         />
         <link href="/static/css/styles.css" rel="stylesheet" />
       </Head>
-      <div className="main-layout" css={MainLayoutStyle}>
+      <div className="main-layout" css={MainLayoutStyle(theme)}>
         <Header />
         <div className={classNames('main-layout__content__wrapper', type)}>
           <div className={classNames('main-layout__content', type)}>
@@ -45,7 +50,7 @@ const MainLayout = ({ children, type }: { children: any, type?: string }) => {
 };
 
 MainLayout.defaultProps = {
-  type: '',
+  type: null,
 };
 
 export default MainLayout;
