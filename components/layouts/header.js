@@ -2,33 +2,21 @@ import Link from 'next/link';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import headerStyle from './header.style';
+import LinkTo from '../atom/LinkTo';
 
 const Header = () => (
   <div css={headerStyle}>
     <header>
       <div className="container">
         <nav className="navbar">
-          <Link href="/">
-            <a className="navbar__brand">
-              MaisonJ&apos;s playground
-            </a>
-          </Link>
+          <LinkTo href="/" className="navbar__brand">MaisonJ&apos;s playground</LinkTo>
         </nav>
       </div>
     </header>
     <nav>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      <Link href="/knowledges">
-        <a>Knowledges</a>
-      </Link>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
+      <LinkTo href="/daily">Daily Study</LinkTo>
+      <LinkTo href="/knowledges">Knowledges</LinkTo>
+      <LinkTo href="/about">About</LinkTo>
     </nav>
   </div>
 );

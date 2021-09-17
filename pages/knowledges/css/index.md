@@ -11,6 +11,27 @@
 
 심플해보이는 방법이다.
 
+
+## flex
+
+flex + margin-left: auto 조합으로 맨 오른쪽에 위치시킬 수 있다.
+
+
+## grid
+
+바닥에 붙이며 정렬하기
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: end;
+}
+
+.item1 {
+    
+}
+
+
 ### translate
 
 ```
