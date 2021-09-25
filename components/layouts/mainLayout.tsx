@@ -13,13 +13,18 @@ const MainLayout = ({ children, type }: { children: any, type?: string }) => {
     theme = LightMainLayoutTheme;
   }
 
+  const myLoader = ({ src, width, quality }: any) => {
+    return `/static/image/${src}?w=${width}&q=${quality || 75}`;
+  };
+
   return (
     <>
       <div className="bgWrap">
         <Image
           priority
+          loader={myLoader}
           alt="background: playground"
-          src="//static/image/playground.jpg"
+          src="playground.jpg"
           layout="fill"
           objectFit="cover"
           quality={30}

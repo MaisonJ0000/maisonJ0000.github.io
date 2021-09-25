@@ -22,7 +22,7 @@ export default DailyStudy;
 
 export const getStaticProps = async () => {
   const allPosts = fetchPosts({
-    rootPagePath: 'daily',
+    rootPagePath: 'knowledges',
   });
 
   return {
