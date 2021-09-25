@@ -3,26 +3,27 @@ import _ from 'lodash';
 
 import MainLayout from '../../components/layouts/mainLayout';
 import { fetchPostPaths, fetchPostByPath } from '../../lib/api/post';
-import markdownToHtml from '../../lib/markdownToHtml';
+import markdownToMdast from '../../lib/markdownToMdast';
+import MarkdownRenderer from '../../components/atom/MarkdownRenderer';
 
 type Props = {
   title: string,
-  content: string
+  contentMdast: any
 }
 
-const Post = ({ title, content }: Props) => (
-  <MainLayout type="post">
-    <Head>
-      <title>{title}</title>
-    </Head>
-    <article>
-      <h1>{title}</h1>
-      <div
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </article>
-  </MainLayout>
-);
+const Post = ({ title, contentMdast }: Props) => {
+  return (
+    <MainLayout type="post">
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <article>
+        <h1>{title}</h1>
+        <MarkdownRenderer mdast={contentMdast} />
+      </article>
+    </MainLayout>
+  );
+};
 
 export default Post;
 
@@ -35,12 +36,12 @@ type Params = {
 export const getStaticProps = async ({ params }: Params) => {
   const { path } = params;
   const post = fetchPostByPath((path.join('/')));
-  const content = await markdownToHtml(post.content || '');
+  const contentMdast = markdownToMdast(post.content || '');
 
   return {
     props: {
       ...post,
-      content,
+      contentMdast,
     },
   };
 };
