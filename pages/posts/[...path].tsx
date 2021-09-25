@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import _ from 'lodash';
 
+import { css } from '@emotion/react';
 import MainLayout from '../../components/layouts/mainLayout';
 import { fetchPostPaths, fetchPostByPath } from '../../lib/api/post';
 import markdownToMdast from '../../lib/markdownToMdast';
 import MarkdownRenderer from '../../components/atom/MarkdownRenderer';
+/** @jsxImportSource @emotion/react */
+import postStyle from './post.style';
 
 type Props = {
   title: string,
@@ -14,13 +17,15 @@ type Props = {
 const Post = ({ title, contentMdast }: Props) => {
   return (
     <MainLayout type="post">
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <article>
-        <h1>{title}</h1>
-        <MarkdownRenderer mdast={contentMdast} />
-      </article>
+      <div css={postStyle}>
+        <Head>
+          <title>{title}</title>
+        </Head>
+        <article>
+          <h1>{title}</h1>
+          <MarkdownRenderer mdast={contentMdast} />
+        </article>
+      </div>
     </MainLayout>
   );
 };

@@ -9,9 +9,8 @@ const PostPreviews = ({ posts }: Props) => (
   <section>
     {posts.map((post) => (
       <PostPreview
-        content={post.content}
-        path={post.path}
-        slug={post.slug}
+        key={post.path}
+        {...post}
       />
     ))}
   </section>

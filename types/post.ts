@@ -5,6 +5,7 @@ type PostType = {
   path: string
   content: string
   slug: string
+  type: string
 }
 
 export default PostType;

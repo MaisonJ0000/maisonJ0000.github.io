@@ -1,18 +1,18 @@
-import Link from 'next/link';
+import _ from 'lodash';
 import { fetchPosts } from '../../lib/api/post';
 import PostPreviews from '../../components/compositions/postPreviews';
 import Post from '../../types/post';
 import MainLayout from '../../components/layouts/mainLayout';
 
 type Props = {
-  allPosts: Post[]
+  sortedPosts: Post[]
 }
 
-const DailyStudy = ({ allPosts }: Props) => {
+const DailyStudy = ({ sortedPosts }: Props) => {
   return (
     <MainLayout>
       <PostPreviews
-        posts={allPosts}
+        posts={sortedPosts}
       />
     </MainLayout>
   );
@@ -25,9 +25,12 @@ export const getStaticProps = async () => {
     rootPagePath: 'knowledges',
   });
 
+  // @ts-ignore
+  const sortedPosts = _.filter(_.orderBy(allPosts, 'date', 'desc'), (r) => r.type === 'draft');
+
   return {
     props: {
-      allPosts,
+      sortedPosts,
     },
   };
 };

@@ -8,10 +8,10 @@ import Header from './header';
 import MainLayoutStyle, { DarkMainLayoutTheme, LightMainLayoutTheme } from './mainLayout.style';
 
 const MainLayout = ({ children, type }: { children: any, type?: string }) => {
-  let theme = DarkMainLayoutTheme;
-  if (type === 'post') {
-    theme = LightMainLayoutTheme;
-  }
+  const theme = DarkMainLayoutTheme;
+  // if (type === 'post') {
+  //   theme = LightMainLayoutTheme;
+  // }
 
   const myLoader = ({ src, width, quality }: any) => {
     return `/static/image/${src}?w=${width}&q=${quality || 75}`;
@@ -45,9 +45,7 @@ const MainLayout = ({ children, type }: { children: any, type?: string }) => {
       <div className="main-layout" css={MainLayoutStyle(theme)}>
         <Header />
         <div className={classNames('main-layout__content__wrapper', type)}>
-          <div className={classNames('main-layout__content', type)}>
-            {children}
-          </div>
+          {children}
         </div>
       </div>
     </>

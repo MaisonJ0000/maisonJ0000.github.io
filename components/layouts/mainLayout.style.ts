@@ -16,12 +16,16 @@ const MainLayoutStyle = (theme: { background: string, color: string }) => css`
     align-items: center;
   }
   .main-layout__content__wrapper {
-    max-width: 80%;
-    margin: 0 auto;
+    margin: 30px;
+    // max-width: 80%;
+    // margin: 0 auto;
   }
   .main-layout__content__wrapper.post {
-    max-width: 80%;
-    margin: 0 auto;
+    background-color: #fff;
+    color: #000;
+    padding: 0 10%;
+    // max-width: 80%;
+    // margin: 0 auto;
   }
   .main-layout__content.post {
     margin: auto;
