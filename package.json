@@ -28,7 +28,7 @@
     "react-dom": "^17.0.2",
     "react-syntax-highlighter": "^13.5.1",
     "rehype-stringify": "^9.0.2",
-    "remark-custom": "file:../RemarkCustom",
+    "remark-custom": "github:MaisonJ0000/RemarkCustom",
     "remark-directive": "^2.0.0",
     "remark-parse": "^10.0.0",
     "remark-rehype": "^9.1.0",
