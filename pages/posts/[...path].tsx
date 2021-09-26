@@ -7,7 +7,7 @@ import { fetchPostPaths, fetchPostByPath } from '../../lib/api/post';
 import markdownToMdast from '../../lib/markdownToMdast';
 import MarkdownRenderer from '../../components/atom/MarkdownRenderer';
 /** @jsxImportSource @emotion/react */
-import postStyle from './post.style';
+import postStyle from '../../components/post.style';
 
 type Props = {
   title: string,
