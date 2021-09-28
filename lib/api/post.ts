@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import _ from 'lodash';
+import PostType from '../../types/post';
 
 const fetchPostPaths = (opts: { rootPagePath: string }): string[] => {
   const { rootPagePath = '' } = opts;
@@ -31,17 +32,23 @@ const fetchPostPaths = (opts: { rootPagePath: string }): string[] => {
   return allPaths;
 };
 
-const fetchPostByPath = (_path: string) => {
+const fetchPostByPath = (_path: string): PostType => {
   const fullPath = path.join(process.cwd(), `pages/${_path}.md`);
   const slug = _(_path).split('/').last();
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { content, data } = matter(fileContents);
+  const {
+    title, description, date, type = null,
+  } = data;
 
   return {
     path: _path,
     slug,
     content,
-    ...data,
+    title,
+    description,
+    date,
+    type,
   };
 };
 

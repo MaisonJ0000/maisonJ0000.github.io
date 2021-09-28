@@ -25,8 +25,13 @@ export const getStaticProps = async () => {
     rootPagePath: 'knowledges',
   });
 
-  // @ts-ignore
-  const sortedPosts = _.filter(_.orderBy(allPosts, 'date', 'desc'), (r) => r.type === 'draft');
+  const sortedPosts = _(allPosts)
+    .filter((r) => {
+      _.assign(r, { isDraft: r.type === 'draft' });
+      return !!r.date;
+    })
+    .orderBy('date', 'desc')
+    .value();
 
   return {
     props: {

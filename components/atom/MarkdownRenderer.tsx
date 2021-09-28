@@ -1,3 +1,9 @@
+import _ from 'lodash';
+import Popover from './Popover';
+
+const { Prism: SyntaxHighlighter } = require('react-syntax-highlighter');
+const { prism } = require('../../node_modules/react-syntax-highlighter/dist/esm/styles/prism');
+
 type Node = {
   children: Node[],
   type: string,
@@ -30,10 +36,29 @@ const getComponent = (node: Node) => {
       return ({ value }) => <>{value}</>;
     case 'code':
       // @ts-ignore
-      return ({ value }) => <>{value}</>;
+      return (opts) => {
+        const { value, lang } = opts;
+        return (
+          <SyntaxHighlighter language={lang} style={prism}>
+            {value}
+          </SyntaxHighlighter>
+        );
+      };
     case 'containerDirective':
       // @ts-ignore
-      return ({ value }) => <section>{value}</section>;
+      return (opts) => {
+        const { name, attributes, children } = opts;
+        const componentMap: {[index: string]:any} = {
+          Popover: {
+            component: Popover,
+            getProps: () => _.assign(attributes, { body: children }),
+          },
+        };
+        const ComponentFactory = componentMap[name].component(
+          componentMap[name].getProps(),
+        );
+        return ComponentFactory;
+      };
 
       /* Handle all types here … */
 

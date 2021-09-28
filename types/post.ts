@@ -4,8 +4,9 @@ type PostType = {
   date: number
   path: string
   content: string
-  slug: string
+  slug?: string
   type: string
+  isDraft?: boolean
 }
 
 export default PostType;
