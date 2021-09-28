@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react';
-import MaterialPopover from '@mui/material/popover';
+import { Popover as MaterialPopover } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { css } from '@emotion/react';
