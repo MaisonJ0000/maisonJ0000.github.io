@@ -8,7 +8,8 @@ type Props = {
   path: string
   date: number
   title: string
-  isDraft: boolean
+  // eslint-disable-next-line react/require-default-props
+  isDraft?: boolean
 }
 
 const PostPreview = ({

@@ -38,7 +38,7 @@ const fetchPostByPath = (_path: string): PostType => {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { content, data } = matter(fileContents);
   const {
-    title, description, date, type = null,
+    title = null, description = null, date = null, type = null,
   } = data;
 
   return {
