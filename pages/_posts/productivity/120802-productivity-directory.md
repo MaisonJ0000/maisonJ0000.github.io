@@ -7,6 +7,11 @@ date: 20210802
 
 # Needs
 
+markdown
+![Amazon Rainforest](/path/to/image)
+
+<span class="caption">The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species.</span>
+
 (macOS)  
 - iTerm2에서 directory마다 변수를 설정하거나 조회할 수 있고, command를 변수에 담아서 바로 실행할 수 있도록 합니다.
 - iTerm2에서 명령어를 통해 현재 directory에서 IntelliJ를 바로 엽니다.

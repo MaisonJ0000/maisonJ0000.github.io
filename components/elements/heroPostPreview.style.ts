@@ -11,7 +11,7 @@ const heroPostStyle = css`
   .link__container {
     text-decoration: none;
     font-family: "Gowun Dodum", "Roboto Condensed", sans-serif;
-    color: #fff;
+    color: #000;
     h1 {
       font-size: 50px;
       line-height: 55px;

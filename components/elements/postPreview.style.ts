@@ -6,7 +6,7 @@ const postPreviewStyle = css`
   }
   .title {
     a {
-      color: #fff;
+      color: #000;
     }
   }
 `;

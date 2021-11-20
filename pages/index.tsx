@@ -1,7 +1,7 @@
 import MainLayout from '../components/layouts/mainLayout';
 import { fetchLastPost } from '../lib/api/post';
 import Post from '../types/post';
-import HeroPostPreview from '../components/elements/heroPostPreview';
+import PostsPreview from '../components/elements/heroPostPreview';
 
 type Props = {
   lastPost: Post
@@ -10,7 +10,7 @@ type Props = {
 const Home = ({ lastPost }: Props) => {
   return (
     <MainLayout>
-      <HeroPostPreview
+      <PostsPreview
         post={lastPost}
       />
     </MainLayout>

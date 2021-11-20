@@ -5,7 +5,7 @@ const headerStyle = css`
   backgroundColor: rgba(0, 0, 0, 0.4);
   header {
     .navbar__brand {
-      color: #fff;
+      color: #000;
       font-family: Zen Tokyo Zoo;
       font-size: 30px;
       font-weight: 900;
@@ -15,7 +15,7 @@ const headerStyle = css`
   nav {
     a {
       font-size: 20px;
-      color: #fff;
+      color: #000;
       padding: 0 0 0 10px;
     }
     

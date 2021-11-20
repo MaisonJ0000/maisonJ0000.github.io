@@ -8,7 +8,7 @@ import Header from './header';
 import MainLayoutStyle, { DarkMainLayoutTheme, LightMainLayoutTheme } from './mainLayout.style';
 
 const MainLayout = ({ children, type }: { children: any, type?: string }) => {
-  const theme = DarkMainLayoutTheme;
+  const theme = LightMainLayoutTheme;
   // if (type === 'post') {
   //   theme = LightMainLayoutTheme;
   // }
@@ -19,17 +19,7 @@ const MainLayout = ({ children, type }: { children: any, type?: string }) => {
 
   return (
     <>
-      <div className="bgWrap">
-        <Image
-          priority
-          loader={myLoader}
-          alt="background: playground"
-          src="playground.jpg"
-          layout="fill"
-          objectFit="cover"
-          quality={30}
-        />
-      </div>
+      <div className="bgWrap" />
       <Head>
         <title>{'MaisonJ\'s Playground'}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,9 +34,9 @@ const MainLayout = ({ children, type }: { children: any, type?: string }) => {
       </Head>
       <div className="main-layout" css={MainLayoutStyle(theme)}>
         <Header />
-        <div className={classNames('main-layout__content__wrapper', type)}>
+        <main className="p-16">
           {children}
-        </div>
+        </main>
       </div>
     </>
   );
