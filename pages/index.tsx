@@ -1,5 +1,5 @@
-import MainLayout from "components/templates/mainLayout";
-import Head from "next/head";
+import MainLayout from 'components/templates/mainLayout';
+import Head from 'next/head';
 
 // import { fetchLastPost } from '../lib/api/post';
 // import Post from '../types/post';
