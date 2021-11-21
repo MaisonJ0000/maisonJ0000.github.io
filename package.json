@@ -1,5 +1,5 @@
 {
-  "name": "blog2",
+  "name": "blog",
   "private": true,
   "scripts": {
     "dev": "next dev -p 4000 && open http://localhost:4000",
