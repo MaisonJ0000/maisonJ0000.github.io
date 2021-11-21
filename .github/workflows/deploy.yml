@@ -16,6 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm cache clean --force
+          npm i
       - name: push /out/ to gh-pages
         run: |
           git config user.name github-actions
