@@ -4,7 +4,7 @@ import { FC } from "react";
 const MainLayout: FC = ({ children }) => {
   return (
     <>
-      <header>
+      <header className="font-zentokyo text-3xl">
         <Link href="/">MaisonJ&apos;s playground</Link>
       </header>
       <nav>
