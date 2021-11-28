@@ -34,6 +34,20 @@ module.exports = {
           "0%": { backgroundPosition: "right" },
           "100%": { backgroundPosition: "left" },
         },
+
+        ".animate-pulse-strong": {
+          animationName: "pulse",
+          animationDuration: "1s",
+          animationIterationCount: "infinite",
+        },
+        "@keyframes pulse": {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
+          },
+        },
       };
 
       addUtilities(animations);

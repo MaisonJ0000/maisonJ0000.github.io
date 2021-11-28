@@ -10,12 +10,15 @@ describe("Home", () => {
   it("renders necessaries", () => {
     render(<MainLayout />);
 
-    // const header = screen.getByRole("banner");
-    // expect(header).toBeInTheDocument();
-    // expect(header).toHaveTextContent("MaisonJ's playground");
+    const header = screen.getByRole("banner");
+    expect(header).toBeInTheDocument();
+    expect(header).toHaveTextContent("MaisonJ's playground");
 
-    // about
-    // posts
+    const posts = screen.getByText("Posts");
+    const about = screen.getByText("About");
+    expect(posts).toBeInTheDocument();
+    expect(about).toBeInTheDocument();
+
     // search input
 
     //storybook
