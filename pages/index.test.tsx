@@ -13,5 +13,12 @@ describe("Home", () => {
     const header = screen.getByRole("banner");
     expect(header).toBeInTheDocument();
     expect(header).toHaveTextContent("MaisonJ's playground");
+
+    // about
+    // posts
+    // search input
+
+    //storybook
+    // cypress (in 공홈 testing)
   });
 });

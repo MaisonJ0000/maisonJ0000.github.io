@@ -16,6 +16,7 @@
 # package
 package-lock.json
 
-
+# etc
+*.DS_Store
 
 
