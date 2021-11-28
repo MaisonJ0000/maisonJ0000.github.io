@@ -5,7 +5,9 @@ const MainLayout: FC = ({ children }) => {
   return (
     <>
       <header className="font-zentokyo text-3xl">
-        <Link href="/">MaisonJ&apos;s playground</Link>
+        <span className="animate-shine">
+          <Link href="/">MaisonJ&apos;s playground</Link>
+        </span>
       </header>
       <nav>
         <Link href="/about">About</Link>

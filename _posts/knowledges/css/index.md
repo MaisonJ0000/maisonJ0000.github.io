@@ -96,3 +96,9 @@ animation-duration: 1s;
 }
 ```
 - animation을 별도로 지정할 수 있는데 가독성이 훨씬 좋아보인다.
+
+
+
+### examples
+
+https://dev.to/afif/another-100-underline-overlay-animations-the-extended-css-collection-574c
