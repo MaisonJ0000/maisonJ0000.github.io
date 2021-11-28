@@ -28,8 +28,10 @@ jobs:
 
       - name: Install dependencies
         if: steps.node-cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build
         run: |
-          npm ci
           npm run build
           npm run test
 
