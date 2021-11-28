@@ -13,9 +13,6 @@
 # production
 /build
 
-# package
-package-lock.json
-
 # etc
 *.DS_Store
 
