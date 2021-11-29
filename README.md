@@ -6,15 +6,17 @@ https://maisonj0000.github.io/
 
 - Framework
   - Next.js
-- Transpiler
+- Type Checking
   - TypeScript
+- Transpiler
+  - SWC
 - Formatter
   - ESLint
-  - Prettier
 - Style
   - TailwindCSS
 - Test
   - Jest
   - React Testing Library
-
-test
+  - Cypress
+- UI
+  - Storybook
