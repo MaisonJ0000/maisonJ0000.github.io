@@ -3,7 +3,6 @@ import LinkedinLogo from "components/atoms/Svgs/linkedinLogo";
 import MailLogo from "components/atoms/Svgs/mailLogo";
 import MainLayout from "components/templates/mainLayout";
 import Image from "next/image";
-import profilePic from "public/profile.jpg";
 
 export default function About() {
   return (
@@ -14,7 +13,7 @@ export default function About() {
       </div>
       <div className="h-64 overflow-hidden">
         <div className="w-96 h-96 m-auto rounded-full overflow-hidden">
-          <Image src={profilePic} alt="Picture of me" />
+          <Image src="/profile.jpg" alt="Picture of me" />
         </div>
       </div>
       <ul className="list-none divide-y divide-gray-400 mx-10">
