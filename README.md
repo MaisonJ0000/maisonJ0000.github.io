@@ -16,5 +16,3 @@ https://maisonj0000.github.io/
 - Test
   - Jest
   - React Testing Library
-
-test deploy
