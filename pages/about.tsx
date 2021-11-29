@@ -13,7 +13,12 @@ export default function About() {
       </div>
       <div className="h-64 overflow-hidden">
         <div className="w-96 h-96 m-auto rounded-full overflow-hidden">
-          <Image src="/profile.jpg" alt="Picture of me" />
+          <Image
+            src="/profile.jpg"
+            alt="Picture of me"
+            width="400"
+            height="300"
+          />
         </div>
       </div>
       <ul className="list-none divide-y divide-gray-400 mx-10">
