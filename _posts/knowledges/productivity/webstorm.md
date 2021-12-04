@@ -22,5 +22,8 @@ Tool windows: Project: opt + 1
 cmd + k, k : commit
 
 
-cmd는 진짜 명령어
-ctrl은 컨튜롤
+open Project tool window: cmd + 1
+selected file in Project: shift + cmd + 1
+
+open Commit tool window: cmd + 2
+
