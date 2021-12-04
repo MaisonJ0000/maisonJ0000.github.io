@@ -23,5 +23,10 @@ describe("Home", () => {
 
     //storybook
     // cypress (in 공홈 testing)
+
+    // 반응형 지원, 테스트?
+    // 이미지 relative하게 가져올 수 없나?
+    // 이 블로그의 스펙도 about에 넣을 수 있도록
+    //
   });
 });
