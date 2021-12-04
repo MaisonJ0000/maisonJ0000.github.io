@@ -21,6 +21,8 @@ Tool windows: Project: opt + 1
 [new]
 cmd + k, k : commit
 
+ctrl + shift + z : rollback
+
 
 open Project tool window: cmd + 1
 selected file in Project: shift + cmd + 1
