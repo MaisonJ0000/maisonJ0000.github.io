@@ -1,9 +1,4 @@
-## code
-
-cmd + shift + space : Parameter Info
-
-### inspection
-
+## window
 activate next window: cmd + `
 
 f8: next highlighted error
@@ -25,6 +20,11 @@ opt + down: move line down
 
 ### move
 cmd + shift + . : focus breadcrumbs
+f12: go to definition
+    ctrl + enter: open in side
+
+### watch info
+cmd + shift + space : Parameter Info
 
 
 
@@ -44,3 +44,6 @@ ADD/close editor group (shift + cmd + w)
 
 REMOVE/Find With Selection: cmd + e
 ADD/View Show all Editors By Most recently Used: cmd + e
+
+REMOVE/Open Definition to the Side (cmd + k, f12)
+ADD/Open Definition to the Side (ctrl + f12)

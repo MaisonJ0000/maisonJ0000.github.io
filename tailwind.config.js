@@ -6,13 +6,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        zentokyo: ['"Zen Tokyo Zoo"', "cursive"],
+        zentokyo: ['"Zen Tokyo Zoo"', "cursive"]
       },
-      animation: {},
-    },
+      animation: {}
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [
     plugin(function ({ addUtilities }) {
@@ -27,30 +27,30 @@ module.exports = {
           backgroundClip: "text",
           "&:hover": {
             animationName: "bgShift",
-            animationDuration: "1s",
-          },
+            animationDuration: "1s"
+          }
         },
         "@keyframes bgShift": {
           "0%": { backgroundPosition: "right" },
-          "100%": { backgroundPosition: "left" },
+          "100%": { backgroundPosition: "left" }
         },
 
         ".animate-pulse-strong": {
           animationName: "pulse",
           animationDuration: "1s",
-          animationIterationCount: "infinite",
+          animationIterationCount: "infinite"
         },
         "@keyframes pulse": {
           "0%, 100%": {
-            opacity: "1",
+            opacity: "1"
           },
           "50%": {
-            opacity: "0",
-          },
-        },
+            opacity: "0"
+          }
+        }
       };
 
       addUtilities(animations);
-    }),
-  ],
+    })
+  ]
 };
