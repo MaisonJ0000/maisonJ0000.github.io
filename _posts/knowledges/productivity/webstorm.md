@@ -24,13 +24,15 @@ REMOVE/ Split and Move Right: ctrl + cmd + rightArrow
 ADD/ Move to Opposite Group: ctrl + cmd + rightArrow
 
 
-
 [new]
 ON/view-appearance-details in tree view
 ON/preferences-editor-codeStyle-Javascript-import- (scheme: default) use paths relative to project (vscode에서 "javascript.preferences.importModuleSpecifier": "non-relative",)
 ON/preferences-editor-codeStyle-Typescript-import- (scheme: default) use paths relative to config (vscode에서 "typescript.preferences.importModuleSpecifier": "non-relative",)
 
-ON/preferences-editor-codeStyle-HTML-other- Add for JSX attributes - based on type
+ON/preferences-editor-codeStyle-HTML-other- Add for JSX attributes - none
+
+ON/Editor | General | Code Completion page of the IDE settings Ctrl+Alt+S and select Suggest variable and parameter names
+
 
 
 cmd + k, k : commit
@@ -52,9 +54,28 @@ jump to edit source :
 
 Goto Next Splitter: opt + 1, opt + 2
 
-
 # lint
 fix eslint problems: cmd + ;
+
+
+# Edit
+## Move
+
+REMOVE/ join line: ctrl + J
+REMOVE/ scroll to center: ctrl + L
+REMOVE/ delete to line end: ctrl + K
+
+ADD/ move caret to next word: ctrl + L
+ADD/ move caret to next word: with selection: ctrl + shift + L
+ADD/ move caret to prev word: ctrl + J
+ADD/ move caret to prev word: with selection: ctrl + shift + J
+ADD/ DOWN: ctrl + K
+ADD/ UP: ctrl + I
+
+
+## Select
+ADD/ extend selection: ctrl + shift + I, ctrl + shift + upArrow
+ADD/ shrink selection: ctrl + shift + K, ctrl + shift + downArrow
 
 
 [nature]

@@ -22,6 +22,7 @@ opt + down: move line down
 cmd + shift + . : focus breadcrumbs
 f12: go to definition
     ctrl + enter: open in side
+cmd + shift + \ : move to matching brace
 
 ### watch info
 cmd + shift + space : Parameter Info
