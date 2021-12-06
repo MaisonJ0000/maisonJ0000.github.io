@@ -84,3 +84,6 @@ ADD/ shrink selection: ctrl + shift + K, ctrl + shift + downArrow
 
 ### watch info
 opt + space   OR   opt + f12 : Quick Definition
+
+### edit
+shift + opt + downArrow: duplicate line down
