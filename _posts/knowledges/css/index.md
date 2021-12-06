@@ -102,3 +102,18 @@ animation-duration: 1s;
 ### examples
 
 https://dev.to/afif/another-100-underline-overlay-animations-the-extended-css-collection-574c
+
+
+## anim examples2
+
+### sites
+대충 css award 로 검색하면 나온다.
+https://www.cssdesignawards.com/
+https://www.awwwards.com/
+
+여기서 Wappalyzer로 라이브러리 파악
+
+### libraries
+lottie
+three.js (https://threejs.org/)
+GSAP (https://greensock.com/gsap/)
