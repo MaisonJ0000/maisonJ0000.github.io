@@ -5,10 +5,10 @@ import MainLayout from "./mainLayout";
 
 export default {
   title: "Template/MainLayout",
-  component: MainLayout,
+  component: MainLayout
 } as ComponentMeta<typeof MainLayout>;
 
-const Template: ComponentStory<typeof MainLayout> = (args) => (
+const Template: ComponentStory<typeof MainLayout> = args => (
   <MainLayout {...args} />
 );
 
