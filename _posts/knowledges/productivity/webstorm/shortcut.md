@@ -2,6 +2,9 @@ install vscode plugin
 
 [modify]
 (File: Open Recent)
+REMOVE Refactor this ctrl + shift + r
+MODIFY recent files to ctrl + shift + r
+open recent: ctrl + r
 
 
 (cursorHome)
@@ -23,6 +26,9 @@ ADD/open recent: ctrl + r
 REMOVE/ Split and Move Right: ctrl + cmd + rightArrow
 ADD/ Move to Opposite Group: ctrl + cmd + rightArrow
 
+# Code
+## Completion
+REMOVE/ Choose Lookup Item: enter
 
 [new]
 ON/view-appearance-details in tree view
