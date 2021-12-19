@@ -1,7 +1,7 @@
-import NavLink from "component/atom/Link/NavLink";
-import LinkTo from "component/atom/Link/LinkTo";
-import React from "react";
-import Head from "next/head";
+import NavLink from 'component/atom/Link/NavLink';
+import LinkTo from 'component/atom/Link/LinkTo';
+import React from 'react';
+import Head from 'next/head';
 
 interface IProps {
   children?: React.ReactNode;
