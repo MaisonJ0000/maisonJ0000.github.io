@@ -8,6 +8,7 @@ interface IProps extends HTMLAttributes<HTMLElement> {
 }
 
 export default function FlagLink({
+  href,
   children,
   outerColorClass = 'bg-primary',
   innerColorClass = 'bg-secondary',
@@ -25,7 +26,7 @@ export default function FlagLink({
             'rounded-r-full pl-2 pr-3 py-1 text-[10px] sm:text-sm text-lime-100 hover:text-rose-700',
             innerColorClass,
           )}
-          href="https://github.com/MaisonJ0000/maisonj0000.github.io"
+          href={href}
           target="_blank"
           rel="noreferrer"
         >
