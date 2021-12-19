@@ -37,7 +37,9 @@ const Home = ({ lastPosts }: IProps) => {
               <FlagLink href="https://github.com/MaisonJ0000/maisonj0000.github.io">
                 github
               </FlagLink>
-              <FlagLink href="/">storybook</FlagLink>
+              <FlagLink href="https://maisonj0000.github.io/storybook">
+                storybook
+              </FlagLink>
             </div>
           </div>
         </div>
