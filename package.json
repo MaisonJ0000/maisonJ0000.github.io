@@ -3,13 +3,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 4000 && open http://localhost:4000",
-    "build": "next build && build-storybook -o ./out/storybook && next export && touch out/.nojekyll",
+    "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o ./out/storybook",
     "cypress": "cypress open"
   },
   "dependencies": {
