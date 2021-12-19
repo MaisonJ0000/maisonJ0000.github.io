@@ -17,6 +17,14 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

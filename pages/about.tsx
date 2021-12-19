@@ -1,7 +1,7 @@
-import GithubLogo from "components/atoms/Svgs/githubLogo";
-import LinkedinLogo from "components/atoms/Svgs/linkedinLogo";
-import MailLogo from "components/atoms/Svgs/mailLogo";
-import MainLayout from "components/templates/mainLayout";
+import GithubLogo from "component/atom/Svg/githubLogo";
+import LinkedinLogo from "component/atom/Svg/linkedinLogo";
+import MailLogo from "component/atom/Svg/mailLogo";
+import MainLayout from "component/template/mainLayout";
 import Image from "next/image";
 
 export default function About() {

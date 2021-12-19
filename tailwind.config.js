@@ -1,12 +1,23 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        zentokyo: ['"Zen Tokyo Zoo"', "cursive"]
+        zentokyo: ['"Zen Tokyo Zoo"', "cursive"],
+        montserrat: ['"Montserrat"', "sans-serif"]
+      },
+      colors: {
+        primary: "#005F73",
+        secondary: "#0A9396",
+        tertiary: "#94D2BD"
+      },
+      backgroundImage: {
+        "gradient-conic-flag":
+          // "conic-gradient(from -135deg, var(--tw-gradient-from) 0 90deg, var(--tw-gradient-to) 0)"
+          "conic-gradient(from -135deg, var(--tw-gradient-from) 0 90deg, #0000 0)"
       },
       animation: {}
     }
@@ -35,6 +46,24 @@ module.exports = {
           "100%": { backgroundPosition: "left" }
         },
 
+        ".animate-shine-block": {
+          backgroundImage: "radial-gradient(5% 10% at 70% 30%, #FFF, #0000)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "0% 0%",
+          animationName: "bgShiftToUpper",
+          animationDuration: "0.5s"
+        },
+        "@keyframes bgShiftToUpper": {
+          "0%": {
+            backgroundSize: "0% 0%",
+            backgroundPosition: "100% 0%"
+          },
+          "100%": {
+            backgroundSize: "150% 200%",
+            backgroundPosition: "40% 80%"
+          }
+        },
+
         ".animate-pulse-strong": {
           animationName: "pulse",
           animationDuration: "1s",
@@ -47,6 +76,21 @@ module.exports = {
           "50%": {
             opacity: "0"
           }
+        },
+
+        ".animate-inverted-hover-b": {
+          color: "transparent",
+          background:
+            "radial-gradient(50% 100% at bottom, #fff 97%, #000), radial-gradient(50% 100% at bottom, #0A9396 97%, #0000), #888",
+          "-webkit-background-clip": "text,padding-box,text",
+          "background-clip": "text,padding-box,text",
+          "background-size": "0% 0%",
+          "background-position": "bottom",
+          "background-repeat": "no-repeat",
+          transition: "0.1s"
+        },
+        ".animate-inverted-hover-b:hover": {
+          "background-size": "110% 40%"
         }
       };
 

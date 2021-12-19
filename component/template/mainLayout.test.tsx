@@ -11,6 +11,7 @@ describe("Home", () => {
     render(<MainLayout />);
 
     const header = screen.getByRole("banner");
+    console.log("[COZE_LOG] expect(header)", expect(header));
     expect(header).toBeInTheDocument();
     expect(header).toHaveTextContent("MaisonJ's playground");
 
