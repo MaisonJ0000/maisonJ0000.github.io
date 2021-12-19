@@ -26,6 +26,7 @@ const Home = ({ lastPosts }: IProps) => {
               height="250"
               layout="responsive"
               objectFit="cover"
+              placeholder="blur"
               priority
             />
           </div>

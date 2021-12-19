@@ -18,6 +18,7 @@ export default function About() {
             alt="Picture of me"
             width="400"
             height="300"
+            placeholder="blur"
           />
         </div>
       </div>
