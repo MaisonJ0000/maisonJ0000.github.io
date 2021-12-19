@@ -26,6 +26,7 @@ const Home = ({ lastPosts }: IProps) => {
               height="250"
               layout="responsive"
               objectFit="cover"
+              priority
             />
           </div>
           <div className="absolute top-0 w-full h-full animate-shine-block flex items-end rounded-sm">
