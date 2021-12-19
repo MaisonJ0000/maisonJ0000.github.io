@@ -1,8 +1,8 @@
-import MainLayout from "component/template/mainLayout";
-import Head from "next/head";
-import Image from "next/image";
-import LinkTo from "component/atom/Link/LinkTo";
-import FlagLink from "component/atom/Link/FlagLink";
+import MainLayout from 'component/template/mainLayout';
+import Head from 'next/head';
+import Image from 'next/image';
+import LinkTo from 'component/atom/Link/LinkTo';
+import FlagLink from 'component/atom/Link/FlagLink';
 
 // import { fetchLastPost } from '../lib/api/post';
 // import Post from '../types/post';
@@ -13,7 +13,7 @@ interface IProps {
 }
 
 const Home = ({ lastPosts }: IProps) => {
-  console.log("[COZE_LOG] lastPosts", lastPosts);
+  console.log('[COZE_LOG] lastPosts', lastPosts);
   return (
     <MainLayout>
       <div className="relative w-full p-5">
@@ -61,7 +61,7 @@ export const getStaticProps = async () => {
   const lastPosts = [{ a: 1 }, { a: 1 }, { a: 1 }, { a: 1 }];
   return {
     props: {
-      lastPosts
-    }
+      lastPosts,
+    },
   };
 };

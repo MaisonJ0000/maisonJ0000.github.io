@@ -1,7 +1,7 @@
 // custom font를 document에 추가하면 된다는 설명과는 반대로 warning이 계속 뜨는 상황
 /* eslint-disable @next/next/no-page-custom-font */
 
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (

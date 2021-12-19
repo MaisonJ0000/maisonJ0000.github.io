@@ -1,4 +1,4 @@
-import MainLayout from "component/template/mainLayout";
+import MainLayout from 'component/template/mainLayout';
 
 export default function Posts() {
   const a = 3;
