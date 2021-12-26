@@ -1,8 +1,7 @@
 import MainLayout from 'component/template/mainLayout';
-import Head from 'next/head';
 import Image from 'next/image';
-import LinkTo from 'component/atom/Link/LinkTo';
-import FlagLink from 'component/atom/Link/FlagLink';
+import GithubLogo from 'component/atom/Svg/GithubLogo';
+import StoryBookLogo from 'component/atom/Svg/StoryBookLogo';
 
 // import { fetchLastPost } from '../lib/api/post';
 // import Post from '../types/post';
@@ -28,49 +27,52 @@ const rgbDataURL = (r: number, g: number, b: number) =>
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 
 const Home = ({ lastPosts }: IProps) => {
-  console.log('[COZE_LOG] lastPosts', lastPosts);
   return (
     <MainLayout>
-      <div className="relative w-full p-5">
-        <div className="relative w-2/3 m-auto ">
-          <div className="opacity-[.9] rounded-md overflow-hidden">
-            <Image
-              src="/playground.jpg"
-              alt="main concept: playground"
-              width="600"
-              height="250"
-              layout="responsive"
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL={rgbDataURL(120, 144, 80)}
-              priority
-            />
-          </div>
-          <div className="absolute top-0 w-full h-full animate-shine-block flex items-end rounded-sm">
-            <h1 className="text-[12px] sm:text-base lg:text-2xl ml-auto mr-2 h-1/3 text-[#e2f9e3]">
-              MaisonJ (혹은 Coze) 의 기술블로그입니다.
-            </h1>
-            <div className="absolute left-full top:0 sm:top-1/2 lg:top-2/3 grid font-montserrat text-sm lg:text-base font-bold gap-1 sm:gap-4">
-              <FlagLink href="https://github.com/MaisonJ0000/maisonj0000.github.io">
-                github
-              </FlagLink>
-              <FlagLink href="https://maisonj0000.github.io/storybook">
-                storybook
-              </FlagLink>
-            </div>
+      <div className="relative w-full opacity-[0.9]">
+        <Image
+          src="/playground.jpg"
+          alt="main concept: playground"
+          width="600"
+          height="250"
+          layout="responsive"
+          objectFit="cover"
+          placeholder="blur"
+          blurDataURL={rgbDataURL(120, 144, 80)}
+          priority
+        />
+
+        <div className="absolute top-0 w-full h-full animate-shine-block flex items-end">
+          <div className="h-1/2 w-1/3 mx-auto flex items-center justify-center gap-20">
+            <a
+              className="opacity-[0.9] hover:animate-spin bg-white rounded-full w-30 lg:w-50 h-30 lg:h-50 flex items-center justify-center"
+              href="https://github.com/MaisonJ0000/maisonj0000.github.io"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubLogo width="30" height="30" />
+            </a>
+            <a
+              className="opacity-[0.9] hover:animate-spin bg-white rounded-full w-30 lg:w-50 h-30 lg:h-50 flex items-center justify-center"
+              href="https://maisonj0000.github.io/storybook"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <StoryBookLogo />
+            </a>
           </div>
         </div>
       </div>
       <ol>
-        {lastPosts.map(post => {
-          return (
-            <li key={Math.random()} className="p-20">
-              aaaaa
-            </li>
-          );
-        })}
+        {/*{lastPosts.map(post => {*/}
+        {/*  return (*/}
+        {/*    <li key={Math.random()} className="p-20">*/}
+        {/*      aaaaa*/}
+        {/*    </li>*/}
+        {/*  );*/}
+        {/*})}*/}
       </ol>
-      <div>more</div>
+      {/*<div>more</div>*/}
     </MainLayout>
   );
 };

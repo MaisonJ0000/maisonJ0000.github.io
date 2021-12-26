@@ -13,14 +13,14 @@ export default function MainLayout({ children }: IProps) {
       <Head>
         <title>{"MaisonJ's Playground"}</title>
       </Head>
-      <header className="flex border-b border-gray pt-2">
-        <span className="font-zentokyo text-sm sm:text-2xl animate-shine">
-          <LinkTo className="px-1 sm:px-2 lg:px-10" href="/">
+      <header className="sticky top-0 bg-white z-10 grid grid-cols-3 items-end p-10 border-b pt-15 border-gray">
+        <span className="font-zentokyo animate-shine text-15 sm:text-20 lg:text-30">
+          <LinkTo className="px-10" href="/">
             MaisonJ&apos;s playground
           </LinkTo>
         </span>
 
-        <nav className="flex items-end ml-0 sm:ml-10">
+        <nav className="flex justify-center items-end">
           <NavLink href="/posts">Posts</NavLink>
           <NavLink href="/about">About</NavLink>
         </nav>

@@ -1,51 +1,71 @@
-import GithubLogo from 'component/atom/Svg/githubLogo';
-import LinkedinLogo from 'component/atom/Svg/linkedinLogo';
-import MailLogo from 'component/atom/Svg/mailLogo';
+import GithubLogo from 'component/atom/Svg/GithubLogo';
+import LinkedinLogo from 'component/atom/Svg/LinkedinLogo';
+import MailLogo from 'component/atom/Svg/MailLogo';
 import MainLayout from 'component/template/mainLayout';
 import Image from 'next/image';
+import React from 'react';
+
+interface IItemProps {
+  logo?: React.ReactNode;
+  name: string;
+  value: string;
+  isLinkValue?: boolean;
+}
+const Item = (props: IItemProps) => {
+  const { logo, name, value, isLinkValue } = props;
+  return (
+    <li className="py-40 px-0 sm:px-40 flex items-center">
+      <span className="w-40 pr-0 sm:pr-30">{logo}</span>
+      <span className="uppercase w-400 font-bold text-20 sm:text-3xl font-montserrat">
+        {name}
+      </span>
+      {isLinkValue ? (
+        <a className="sm:text-xl underline hover:text-green-600" href={value}>
+          {value}
+        </a>
+      ) : (
+        <span className="text-xl">{value}</span>
+      )}
+    </li>
+  );
+};
 
 export default function About() {
   return (
     <MainLayout>
-      <div className="text-7xl ml-8 mt-12 text-green-600">
+      <div className="text-7xl pl-40 pt-60 text-green-600">
         <span className="font-zentokyo">MaisonJ</span>
         <span className="animate-pulse-strong">:</span>
       </div>
-      <div className="h-64 overflow-hidden">
-        <div className="w-96 h-96 m-auto rounded-full overflow-hidden">
+      <div className="h-350 my-50 overflow-hidden">
+        <div className="w-450 h-450 m-auto rounded-full overflow-hidden">
           <Image
             src="/profile.jpg"
             alt="Picture of me"
-            width="400"
-            height="300"
-            placeholder="blur"
+            width="600"
+            height="450"
           />
         </div>
       </div>
       <ul className="list-none divide-y divide-gray-400 mx-10">
-        <li className="p-4 flex items-baseline">
-          <span className="w-8 pr-3">
-            <MailLogo />
-          </span>
-          <span className="uppercase font-bold text-4xl w-1/3">email</span>
-          <span className="text-xl">maisonj0000@gmail.com</span>
-        </li>
-        <li className="p-4 flex items-baseline">
-          <span className="w-8 pr-3">
-            <GithubLogo />
-          </span>
-          <span className="uppercase font-bold text-4xl w-1/3">github</span>
-          <span className="text-xl">https://github.com/MaisonJ0000</span>
-        </li>
-        <li className="p-4 flex items-baseline">
-          <span className="w-8 pr-3">
-            <LinkedinLogo />
-          </span>
-          <span className="uppercase font-bold text-4xl w-1/3">linkedin</span>
-          <span className="text-xl">
-            https://www.linkedin.com/in/jongman-seo-663085175/
-          </span>
-        </li>
+        <Item name="name" value="서종만" />
+        <Item
+          logo={<MailLogo width="30" height="30" />}
+          name="email"
+          value="maisonj0000@gmail.com"
+        />
+        <Item
+          logo={<GithubLogo width="30" height="30" />}
+          name="github"
+          value="https://github.com/MaisonJ0000"
+          isLinkValue
+        />
+        <Item
+          logo={<LinkedinLogo width="30" height="30" />}
+          name="linkedin"
+          value="https://www.linkedin.com/in/jongman-seo-663085175/"
+          isLinkValue
+        />
       </ul>
     </MainLayout>
   );

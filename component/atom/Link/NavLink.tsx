@@ -11,12 +11,16 @@ interface IProps extends HTMLAttributes<HTMLElement> {
 export default function NavLink({ href, children }: IProps) {
   const { asPath } = useRouter();
   return (
-    <span className="mx-0 sm:mx-5">
+    <span
+      className={`mx-10 mb-0 lg:mb-6 border-b-2 leading-none ${
+        asPath === href ? 'border-gray-800' : 'border-transparent'
+      }`}
+    >
       <Link href={href}>
         <a
           className={classnames(
-            'px-3 text-sm sm:text-xl font-montserrat animate-inverted-hover-b',
-            { 'border-b-2 border-secondary !text-black': asPath === href },
+            'px-10 font-montserrat text-16 lg:text-20 leading-none animate-inverted-hover-b',
+            { '!bg-black': asPath === href },
           )}
         >
           {children}
