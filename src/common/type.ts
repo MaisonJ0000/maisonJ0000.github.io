@@ -3,4 +3,5 @@ export interface IPost {
   content: string;
   title: string;
   date: string; // yyyyMMdd
+  isPublished?: boolean;
 }

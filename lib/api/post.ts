@@ -28,7 +28,6 @@ const fetchPostPaths = (opts: { rootPagePath: string }): string[] => {
     .flattenDeep()
     .compact()
     .value();
-
   return allPaths;
 };
 
@@ -37,20 +36,28 @@ const fetchPostByPath = (_path: string): IPost => {
   const slug = _(_path).split('/').last();
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { content, data } = matter(fileContents);
-  const { title = null, description = null, date = null, type = null } = data;
+  const {
+    title = null,
+    description = null,
+    date = null,
+    type = null,
+    isPublished = false,
+  } = data;
 
   return {
     path: _path,
     content,
     title,
     date,
+    isPublished,
   };
 };
 
 const fetchPosts = (opts: { rootPagePath: string }) => {
   const paths = fetchPostPaths(opts);
   const posts = _.map(paths, _path => fetchPostByPath(_path));
-  const sortedPosts = _.orderBy(posts, 'date', 'desc');
+  const filteredPosts = posts.filter(post => post.isPublished);
+  const sortedPosts = _.orderBy(filteredPosts, 'date', 'desc');
   return sortedPosts;
 };
 

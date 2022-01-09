@@ -14,9 +14,9 @@ interface IItemProps {
 const Item = (props: IItemProps) => {
   const { logo, name, value, isLinkValue } = props;
   return (
-    <li className="py-40 px-0 sm:px-40 flex items-center">
-      <span className="w-40 pr-0 sm:pr-30">{logo}</span>
-      <span className="uppercase w-400 font-bold text-20 sm:text-3xl font-montserrat">
+    <li className="py-40 px-0 flex-none flex-[1_1_100%] sm:px-40 flex items-center">
+      <span className="w-40 outline-none flex pr-0 sm:pr-30">{logo}</span>
+      <span className="uppercase col-sp w-400 font-bold text-20 sm:text-3xl font-montserrat">
         {name}
       </span>
       {isLinkValue ? (
@@ -48,7 +48,7 @@ export default function About() {
         </div>
       </div>
       <ul className="list-none divide-y divide-gray-400 mx-10">
-        <Item name="name" value="서종만" />
+        <Item name="name" value="서종만/coze" />
         <Item
           logo={<MailLogo width="30" height="30" />}
           name="email"

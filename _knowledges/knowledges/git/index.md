@@ -21,3 +21,23 @@ before: g clone git@github.com:organization/repo1.git
 github.com이라는 호스트를 변경할 것이다.
 
 after: g clone git@github-MaisonJ0000:organization/repo1.git
+
+
+디렉토리별 설정
+
+.gitconfig
+ [user]
+ 	email = coze.nutmott@kakaoent.com
+ 	name = coze-nutmott
+
+
+vi ~/.gitconfig
+
+[includeIf "gitdir:~/Maison/"]
+  path = ~/Maison/.gitconfig
+
+[includeIf "gitdir:~/Work/"]
+  path = ~/Work/.gitconfig
+
+[includeIf "gitdir:~/Project/MVTI/"]
+  path = ~/Project/MVTI/.gitconfig

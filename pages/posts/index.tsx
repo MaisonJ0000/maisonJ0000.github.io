@@ -10,7 +10,7 @@ interface IPostsProps {
 export default function Posts({ posts }: IPostsProps) {
   return (
     <MainLayout>
-      <section className="my-20 mx-auto w-2/3 divide-y divide-gray-300">
+      <section className="my-20 mx-auto w-full sm:w-2/3 divide-y divide-gray-300">
         {posts.map(post => (
           <PostPreview key={post.path} post={post} />
         ))}
