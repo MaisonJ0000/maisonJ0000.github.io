@@ -2,7 +2,6 @@ import MainLayout from 'component/template/mainLayout';
 import Image from 'next/image';
 import GithubLogo from 'component/atom/Svg/GithubLogo';
 import StoryBookLogo from 'component/atom/Svg/StoryBookLogo';
-import Script from 'next/script';
 
 // import { fetchLastPost } from '../lib/api/post';
 // import Post from '../types/post';
@@ -30,19 +29,6 @@ const rgbDataURL = (r: number, g: number, b: number) =>
 const Home = ({ lastPosts }: IProps) => {
   return (
     <MainLayout>
-      <Script
-        id="google-analytics"
-        src="https://www.googletagmanager.com/gtag/js?id=G-X6J12F6QTB"
-        strategy="afterInteractive"
-      >
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', 'G-X6J12F6QTB');
-        `}
-      </Script>
       <div className="relative w-full opacity-[0.9]">
         <Image
           src="/playground.jpg"

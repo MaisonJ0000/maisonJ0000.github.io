@@ -25,6 +25,19 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
           rel="stylesheet"
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X6J12F6QTB"
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-X6J12F6QTB');
+          `,
+          }}
+        />
       </Head>
       <body>
         <Main />
