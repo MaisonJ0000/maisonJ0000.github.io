@@ -1,11 +1,11 @@
 module.exports = {
-  plugins: ["prettier"],
+  plugins: ['prettier'],
   extends: [
-    "next/core-web-vitals",
-    "plugin:storybook/recommended",
-    "plugin:prettier/recommended"
+    'next/core-web-vitals',
+    'plugin:storybook/recommended',
+    'plugin:prettier/recommended',
   ],
   rules: {
-    "prettier/prettier": "error"
-  }
+    'prettier/prettier': 'error',
+  },
 };

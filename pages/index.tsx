@@ -13,7 +13,8 @@ interface IProps {
 }
 
 // Pixel GIF code adapted from https://stackoverflow.com/a/33919020/266535
-const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+const keyStr =
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
 const triplet = (e1: any, e2: any, e3: any) =>
   keyStr.charAt(e1 >> 2) +
