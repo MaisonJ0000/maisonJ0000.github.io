@@ -1,3 +1,0 @@
-### svg
-
-https://iconmonstr.com/
